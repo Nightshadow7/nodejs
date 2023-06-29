@@ -3,7 +3,10 @@ import categoriaRoutes from "./routes/categorias.routes.js";
 
 const app = express();
 const port = 7000;
-app.set("port", port)
+app.set("port", port);
+
+//middleware
+app.use(express.json());
 
 //rutas
 
