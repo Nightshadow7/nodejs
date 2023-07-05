@@ -1,15 +1,20 @@
 import express from "express";
-import categoriaRoutes from "./routes/categorias.routes.js";
+import categoraisRouters from "./routers/cateogirias.routers.js"; //cambiamos el nombre de rotuters
+import cors from "cors";
 
 const app = express();
-const port = 7000;
-app.set("port", port);
 
-//middleware
-app.use(express.json());
+app.set("port",4000)
 
-//rutas
+//middlaware funcines en medio
+app.use(express.json())
+app.use(cors())
+//rotas
 
-app.use("/api/categorias",categoriaRoutes);
+app.use("/api/categorias",categoraisRouters);
+
+
 
 export default app;
+
+
